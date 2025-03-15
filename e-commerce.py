@@ -26,12 +26,6 @@ if date_range:
 else:
     filtered_orders = orders_sellers
 
-# Filter berdasarkan seller yang dipilih
-seller_options = filtered_orders['seller_id'].unique()
-selected_seller = st.sidebar.selectbox("Pilih Seller", ['Semua'] + list(seller_options))
-if selected_seller != 'Semua':
-    filtered_orders = filtered_orders[filtered_orders['seller_id'] == selected_seller]
-
 # Menampilkan judul dashboard
 st.title("📊 Dashboard E-Commerce")
 
